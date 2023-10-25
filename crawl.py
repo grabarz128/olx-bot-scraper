@@ -30,7 +30,7 @@ def crawling(website_link, link_class):
     adv_name = []
     pack = []
     
-    for line in website_content.find_all(class_ = link_class['link_class'], href=True):
+    for line in website_content.find_all(class_ = link_class['link_class']):
         moto_link = line.get('href')
         if re.search("^/d/oferta",moto_link):
             moto_link = 'https://www.olx.pl' + moto_link
